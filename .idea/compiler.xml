@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wxcc-service-order" />
+        <module name="wxcc-service-system" />
+        <module name="wxcc-service-media" />
+        <module name="wxcc-pojo-system" />
+        <module name="wxcc-api-media" />
+        <module name="wxcc-pojo-order" />
+        <module name="wxcc-pojo-pay" />
+        <module name="wxcc-pojo-course" />
+        <module name="wxcc-service-pay" />
+        <module name="wxcc-basic-dependency" />
+        <module name="wxcc-api-course" />
+        <module name="wxcc-service-user" />
+        <module name="wxcc-api-user" />
+        <module name="wxcc-api-search" />
+        <module name="wxcc-pojo-uaa" />
+        <module name="wxcc-pojo-common" />
+        <module name="wxcc-service-uaa" />
+        <module name="itfield-basic-common" />
+        <module name="wxcc-api-uaa" />
+        <module name="wxcc-pojo-search" />
+        <module name="wxcc-service-kill" />
+        <module name="itfield-basic-generator" />
+        <module name="wxcc-service-cart" />
+        <module name="wxcc-service-common" />
+        <module name="wxcc-api-system" />
+        <module name="wxcc-service-search" />
+        <module name="wxcc-pojo-kill" />
+        <module name="wxcc-basic-common" />
+        <module name="wxcc-pojo-cart" />
+        <module name="wxcc-pojo-media" />
+        <module name="wxcc-pojo-user" />
+        <module name="wxcc-itfield-gateway" />
+        <module name="wxcc-service-course" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wxcc-service-config" target="1.8" />
+      <module name="wxcc-service-eureka" target="1.8" />
+      <module name="wxcc-ui" target="1.8" />
+      <module name="wxcc-ui-course" target="1.8" />
+      <module name="wxcc-ui-system" target="1.8" />
+      <module name="wxcc-ui-user" target="1.8" />
+      <module name="ymcc-api" target="1.8" />
+      <module name="ymcc-pojo" target="1.8" />
+      <module name="ymcc-pojo-kill" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="itfield-basic-common" options="-parameters" />
+      <module name="itfield-basic-generator" options="-parameters" />
+      <module name="wxcc-api" options="-parameters" />
+      <module name="wxcc-api-course" options="-parameters" />
+      <module name="wxcc-api-media" options="-parameters" />
+      <module name="wxcc-api-search" options="-parameters" />
+      <module name="wxcc-api-system" options="-parameters" />
+      <module name="wxcc-api-uaa" options="-parameters" />
+      <module name="wxcc-api-user" options="-parameters" />
+      <module name="wxcc-basic-common" options="-parameters" />
+      <module name="wxcc-basic-dependency" options="-parameters" />
+      <module name="wxcc-itfield-gateway" options="-parameters" />
+      <module name="wxcc-pojo" options="-parameters" />
+      <module name="wxcc-pojo-cart" options="-parameters" />
+      <module name="wxcc-pojo-common" options="-parameters" />
+      <module name="wxcc-pojo-course" options="-parameters" />
+      <module name="wxcc-pojo-kill" options="-parameters" />
+      <module name="wxcc-pojo-media" options="-parameters" />
+      <module name="wxcc-pojo-order" options="-parameters" />
+      <module name="wxcc-pojo-pay" options="-parameters" />
+      <module name="wxcc-pojo-search" options="-parameters" />
+      <module name="wxcc-pojo-system" options="-parameters" />
+      <module name="wxcc-pojo-uaa" options="-parameters" />
+      <module name="wxcc-pojo-user" options="-parameters" />
+      <module name="wxcc-service-cart" options="-parameters" />
+      <module name="wxcc-service-common" options="-parameters" />
+      <module name="wxcc-service-config" options="-parameters" />
+      <module name="wxcc-service-course" options="-parameters" />
+      <module name="wxcc-service-eureka" options="-parameters" />
+      <module name="wxcc-service-kill" options="-parameters" />
+      <module name="wxcc-service-media" options="-parameters" />
+      <module name="wxcc-service-order" options="-parameters" />
+      <module name="wxcc-service-pay" options="-parameters" />
+      <module name="wxcc-service-search" options="-parameters" />
+      <module name="wxcc-service-system" options="-parameters" />
+      <module name="wxcc-service-uaa" options="-parameters" />
+      <module name="wxcc-service-user" options="-parameters" />
+      <module name="wxcc-ui" options="-parameters" />
+      <module name="wxcc-ui-course" options="-parameters" />
+      <module name="wxcc-ui-system" options="-parameters" />
+      <module name="wxcc-ui-user" options="-parameters" />
+      <module name="ymcc-pojo-kill" options="-parameters" />
+    </option>
+  </component>
+</project>

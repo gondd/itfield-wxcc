@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev #环境名称
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心地址
+        prefix: application-gateway #前缀
+        file-extension: yaml        #后缀
+        namespace: 9bc6c3f7-7c16-401f-b253-f231dc27c79f #命名空间
+        group: DEFAULT_GROUP        #默认分组
+    gateway:
+      excludes:
+        - /wxcc/uaa/login/**
+        - /wxcc/common/**
+        - /wxcc/user/user/register
+        - /wxcc/common/fast/**
+        - /wxcc/media/mediaFile/register
+        - /wxcc/media/mediaFile/checkchunk
+        - /wxcc/media/mediaFile/mergechunks
+        - /wxcc/media/mediaFile/uploadchunk
+        - /wxcc/course/courseType/treeData
+        - /wxcc/course/courseType/loadCrumbs/**
+        - /wxcc/search/search/queryCourse
+        - /wxcc/course/course/detaildata/**
+        - /wxcc/kill/killCourse/online/all
+        - /wxcc/kill/killCourse/**
+        - /wxcc/course/course/pagelist
+        - /wxcc/course/courseType/getcourseid/**
+
+
+jwt:
+  rsa:
+    pri:  hrm_auth_rsa
+    pub:  hrm_auth_rsa.pub

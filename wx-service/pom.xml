@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>itfield-wxcc</artifactId>
+        <groupId>cn.itfield</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>wx-service</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>wxcc-service-system</module>
+        <module>wxcc-service-uaa</module>
+        <module>wxcc-service-user</module>
+        <module>wxcc-service-common</module>
+        <module>wxcc-service-course</module>
+        <module>wxcc-service-media</module>
+        <module>wxcc-service-search</module>
+        <module>wxcc-service-cart</module>
+        <module>wxcc-service-order</module>
+        <module>wxcc-service-pay</module>
+        <module>wxcc-service-kill</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

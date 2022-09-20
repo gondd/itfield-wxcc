@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itfield.wxcc.mapper.MenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itfield.wxcc.domain.Menu">
+        <id column="id" property="id" />
+        <result column="sn" property="sn" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="url" property="url" />
+        <result column="intro" property="intro" />
+        <result column="parent_id" property="parentId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sn, name, icon, url, intro, parent_id
+    </sql>
+    <select id="bymenu" resultType="cn.itfield.wxcc.domain.Menu">
+        SELECT
+            m.*
+        FROM
+            t_login l
+                JOIN t_login_role lr ON l.id = lr.login_id
+                JOIN t_role r ON lr.role_id = r.id
+                JOIN t_role_permission rp ON r.id = rp.role_id
+                JOIN t_permission p ON rp.permission_id = p.id
+                JOIN t_menu m ON p.menu_id = m.id
+                JOIN t_menu m1 ON m.parent_id = m1.id
+        WHERE
+            l.id =#{id}
+    </select>
+    <resultMap id="map" type="cn.itfield.wxcc.domain.Menu">
+        <id column="id" property="id" />
+        <result column="sn" property="sn" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="url" property="url" />
+        <result column="intro" property="intro" />
+        <result column="parent_id" property="parentId" />
+    </resultMap>
+
+</mapper>

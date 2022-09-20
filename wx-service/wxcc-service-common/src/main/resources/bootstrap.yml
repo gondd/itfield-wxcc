@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev #环境名称
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心地址
+        prefix: application-common #前缀
+        file-extension: yaml        #后缀
+        namespace: 9bc6c3f7-7c16-401f-b253-f231dc27c79f #命名空间
+        group: DEFAULT_GROUP        #默认分组
+jwt:
+  rsa:
+    pri:  hrm_auth_rsa
+    pub:  hrm_auth_rsa.pub
+
+
+
+

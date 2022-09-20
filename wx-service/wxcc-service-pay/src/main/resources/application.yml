@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: service-pay #服务名
+  main:
+    allow-bean-definition-overriding: true   #允许Bean覆盖
+  cloud: #注册到Nacos
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848                       #注册中心地址
+        namespace: 9bc6c3f7-7c16-401f-b253-f231dc27c79f   #命名空间
+mybatis-plus:
+  mapper-locations: classpath:cn/itfield/wxcc/mapper/*Mapper.xml
+server:
+  port: 10110
+
+alipay:
+  protocol: https
+  gatewayHost: openapi.alipaydev.com
+  signType: RSA2
+  appId: 2021000121650952
+  merchantPrivateKey: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCEmV2IN8fg0JLdXAEBibAXIbbefdA/iBC/Xd/lN4UX9Q2mLcarUgEYlRE7cbwauJImdXU4flc02y9KZb4yk4U//bBGp9Bx/Eh+q+PcuSi9SaW6PFWs54Ao6+GnY/R4YZifzJqzeGbDXtJ6jT+ZyDTjxRtLagz/bZR80rVNWzldZu7Ge0UbXZMCmIn/Xm5ZrOsovC+Zcomp7YuZvtAbPbwoBYHq68tc9WHOXshq+I2iLYFQlu1U6BibcGQNOcMpPpMJcm6ON67kYpTQQple67mK22jhWRhRv5bF/+0tUebH9tfoUzSQEeYy0MxO7jGN3AJ0S9qoj/z8C/KY+oSmpo+PAgMBAAECggEAUG1RvRjQZL0+B4QRnCQuqakqaUN4t8BJIDnJXxfQ45ogoEYttaZ0wbtRC3RN+wsuoqMl6ZFARfAYfBDAT58I+KpgbErHdQvn0OVjvXKVklKEcjS8Zra4FpoUcdp/4zCXSX3p66fA9Qmjsu/PvvAfnHPmvVRi8988bIXFsFj/r3Wq52fOa/3R3pbC1xvE+5jb/Cf5leRJrBiQMwg99PwmJk2MzLY3kj7GzTtX4d5UfUisNkRpVHQmfMlm+mMe5Xd3TDePXjUPEzeErkJUa2Ar4txswult9BQZG0/aSHdWIYUf2h9qTiNKzXH/NPewbj6UEfJL8Dd23YqS5E8vq2M8iQKBgQDBKHXSvBIkiWKi55dordhAOie7bDEmBjG3KUoQASXIsh3Vm1NJTWihAnb0bEtFkLSEhLbmkAxBGs6SLm99oGj3NXCgzelh7pVEj0q4ALe019hTN1KeGK17Vcw40pEfcAbcjWPxcIVXABMr/9+FPghLVKtJ0VCsAlHwWZa/7/faKwKBgQCvvSKdc4jH3aB2z43pLYql46a9KB+dHxD8OOn0IupxyVTyp4JgycuC8Hv+mDumeDXXBOra1ecPkf7MATSQP6dBJA7rHPGc8Beesgy8RL3hMeE7RANXi9T9UmDQQeJFDhMLtiGJh3gMThl6HOVorAebh+PQXnX6sO5ymIHWWxKiLQKBgQCk4mzxnym9lqlkdl2BNiVLbllMXGb4FoGJ4O0gDFq8n49oMFdAU5vlFb2FmIwIriXqmX+oAX70dHWxw4HYs33myO+D1UJMHuW8yLT3rWUkMryvDKKx4k704aCbQOQw+ehhjTCrgWnRgnbbMGkVzIY4B+bP9KXwr2pSyact4SKqUQKBgQCj5a/fyj15sT+TLvU5z+hr2EnMRhxdy/hqUqYWs22VG2CnQgQ9QlYT0zbA9bdEBP6pfwONfkqVYeKQ3lroYQUaoodrTL4lUGGm9oUcHLw9xug4/rBjOJ02eFqkP53IK10l4gGbIwWZ7Eikc0ic+zvJGM4lqcM8P0DTDVqh0KQrLQKBgQC1bb84NW1RLwkzQ1wViMJn/RIrikmUnVJsWRpihWQvuQ+pDVb4N4CaugGneMUiyEKLuXDFUsTXvGwakkXgq94XPOLfGdGWWygcIS3OoXFG70KWEFFoHy8YOkPBkJqrAmbpQWWbtOk+Z8nTzUUiG3TiMEZNRtl1JolnKnP7aVoxlw==
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi7T0gswaYylhlLeXwQYNq7H5TGD10ogNQ0Sdtq/ODUWTISF4e04jnihV1MMQpr8w5v6ntC6Vk0RAuoFBlN1nwIBfisBm2XJTLolZZbdwyFXkqMzij5ahV9YpBTPMvdHeYqx8cqZdbd/CstcfPspS4VdZtAwGKTyMXuzjdGO9i93+u7WRNth5Oi94x88Etpy5Rhn5TaadFt3bASXrwlsyNpBegVN2rgEOAhBu4LCOZlAuY7jrO8sOGSACkMHzFARdnODLNliGcmW+PFjv81CMiaPNWvcdMmvNCE+cvyd2cu3UJAvWhPScI+pKUpbZv2Jr7WgbVEJIggnz9LM6+7X7QQIDAQAB
+  notifyUrl: https://www.baidu.com
+  encryptKey:
+

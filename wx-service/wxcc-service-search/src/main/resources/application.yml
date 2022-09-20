@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service-search #服务名
+  main:
+    allow-bean-definition-overriding: true   #允许Bean覆盖
+  cloud: #注册到Nacos
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848                       #注册中心地址
+        namespace: 9bc6c3f7-7c16-401f-b253-f231dc27c79f   #命名空间
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch     #ES服务器集群名称
+      cluster-nodes: localhost:9300   #集群的节点
+mybatis-plus:
+  mapper-locations: classpath:cn/itfield/wxcc/mapper/*Mapper.xml
+server:
+  port: 10080

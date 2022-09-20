@@ -1,0 +1,69 @@
+package ${package.Controller};
+
+import ${package.Service}.${table.serviceName};
+import ${package.Entity}.${entity};
+import cn.itfield.wxcc.query.${entity}Query;
+import cn.itfield.wxcc.result.JsonResult;
+import cn.itfield.wxcc.result.PageList;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/${table.entityPath}")
+public class ${entity}Controller {
+
+    @Autowired
+    public ${table.serviceName} ${table.entityPath}Service;
+
+    /**
+    * 保存和修改公用的
+    */
+    @PostMapping("/save")
+    public JsonResult saveOrUpdate(@RequestBody ${entity} ${table.entityPath}){
+        if(${table.entityPath}.getId()!=null){
+            ${table.entityPath}Service.updateById(${table.entityPath});
+        }else{
+            ${table.entityPath}Service.save(${table.entityPath});
+        }
+        return JsonResult.me();
+    }
+
+    /**
+    * 删除对象
+    */
+    @DeleteMapping("/{id}")
+    public JsonResult delete(@PathVariable("id") Long id){
+        ${table.entityPath}Service.removeById(id);
+        return JsonResult.me();
+    }
+
+    /**
+   * 获取对象
+   */
+    @GetMapping("/{id}")
+    public JsonResult get(@PathVariable("id")Long id){
+        return JsonResult.me().setData(${table.entityPath}Service.getById(id));
+    }
+
+
+    /**
+    * 查询所有对象
+    */
+    @GetMapping("/list")
+    public JsonResult list(){
+        return JsonResult.me().setData(${table.entityPath}Service.list(null));
+    }
+
+
+    /**
+    * 带条件分页查询数据
+    */
+    @PostMapping("/pagelist")
+    public JsonResult page(@RequestBody ${entity}Query query){
+        Page<${entity}> page = new Page<${entity}>(query.getPageNo(), query.getPageSize());
+        page = ${table.entityPath}Service.page(page);
+        return JsonResult.me().setData(new PageList<${entity}>(page.getTotal(), page.getRecords()));
+    }
+}

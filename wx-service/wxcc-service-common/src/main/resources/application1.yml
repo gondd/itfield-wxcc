@@ -1,0 +1,34 @@
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-wait: 2000ms
+        min-idle: 2
+        max-idle: 8
+  application:
+    name: service-common #服务名
+  main:
+    allow-bean-definition-overriding: true   #允许Bean覆盖
+  cloud: #注册到Nacos
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848                       #注册中心地址
+        namespace: 9bc6c3f7-7c16-401f-b253-f231dc27c79f   #命名空间
+server:
+  port: 10130
+file:
+  alicloud:
+    bucket-name: wxcc-20220323 #上传空间bucket
+    access-key: LTAI5tB5Xgh6i3jhZtQ11LF7 #你的key
+    secret-key: d9VYa89XTevydtzErYpXuFQTQlLACF #你的秘钥
+    endpoint: oss-cn-chengdu.aliyuncs.com  #上传端点
+  datasource:
+    url: jdbc:mysql:///ymcc-common?serverTimezone=Asia/Shanghai
+    username: root
+    password: wen123
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
